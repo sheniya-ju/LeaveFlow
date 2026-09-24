@@ -1,5 +1,5 @@
 const historyAPI =
-    "http://127.0.0.1:8000";
+    "https://leaveflow-backend-sauc.onrender.com";
 
 const historyToken =
     localStorage.getItem("access_token");

@@ -1,4 +1,4 @@
-const HOLIDAY_API = "http://127.0.0.1:8000";
+const HOLIDAY_API = "https://leaveflow-backend-sauc.onrender.com";
 
 const holidayToken =
     localStorage.getItem("access_token");

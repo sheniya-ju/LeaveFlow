@@ -1,4 +1,4 @@
-const ADMIN_HOLIDAY_API = "http://127.0.0.1:8000";
+const ADMIN_HOLIDAY_API = "https://leaveflow-backend-sauc.onrender.com";
 
 
 // ==========================================

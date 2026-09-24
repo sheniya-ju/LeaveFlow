@@ -1,4 +1,4 @@
-const ADMIN_BALANCE_API = "http://127.0.0.1:8000";
+const ADMIN_BALANCE_API = "https://leaveflow-backend-sauc.onrender.com";
 
 let selectedEmployeeId = null;
 

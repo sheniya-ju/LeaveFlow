@@ -1,5 +1,5 @@
 const MANAGER_CALENDAR_API =
-    "http://127.0.0.1:8000";
+    "https://leaveflow-backend-sauc.onrender.com";
 
 const MANAGER_CALENDAR_TOKEN =
     localStorage.getItem("access_token");
