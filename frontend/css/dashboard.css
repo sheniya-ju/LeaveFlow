@@ -1,0 +1,1695 @@
+/* ==========================================
+   PROFESSIONAL GREEN SIDEBAR
+   ========================================== */
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   SIDEBAR
+   ========================================== */
+
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    min-height: 100vh;
+
+    background: #166534;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px 14px;
+
+    border-right: none;
+
+    box-shadow: 4px 0 15px rgba(22, 101, 52, 0.12);
+}
+
+
+/* ==========================================
+   LOGO
+   ========================================== */
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 12px 28px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.sidebar-logo .logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    color: #166534;
+    background: #ffffff;
+
+    border-radius: 9px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    color: #DCFCE7;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Hover */
+
+.sidebar-nav .nav-link:hover {
+    background: #15803D;
+    color: #ffffff;
+}
+
+
+/* Active */
+
+.sidebar-nav .nav-link.active {
+    background: #22C55E;
+    color: #ffffff;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   LOGOUT
+   ========================================== */
+
+.logout-button {
+    width: calc(100% - 24px);
+
+    margin: auto 12px 8px;
+
+    padding: 11px 14px;
+
+    background: transparent;
+
+    color: #DCFCE7;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+
+.logout-button:hover {
+    background: #15803D;
+
+    color: #ffffff;
+
+    border-color: #86EFAC;
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+
+.main-content {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 32px 36px;
+
+    background: #F8FAFC;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 210px;
+        min-width: 210px;
+
+        padding: 20px 10px;
+    }
+
+    .main-content {
+        padding: 24px 20px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+
+        min-height: auto;
+
+        padding: 15px;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+    .sidebar-nav .nav-link {
+        white-space: nowrap;
+    }
+
+    .logout-button {
+        margin: 12px 0 0;
+        width: 100%;
+    }
+
+}
+
+.main-content {
+    flex: 1;
+    padding: 35px;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.dashboard-header p {
+    color: #64748b;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.stat-card h2 {
+    font-size: 30px;
+    color: #15803d;
+}
+
+.dashboard-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.card-header h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.request-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.request-summary div {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.request-summary span {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.request-summary strong {
+    font-size: 24px;
+    color: #166534;
+}
+
+@media (max-width: 900px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .stats-grid,
+    .request-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #15803d;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#leaveMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 650px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+/* ==========================================
+   LEAVE HISTORY TABLE
+========================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f0fdf4;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    color: #166534;
+    font-size: 14px;
+}
+
+td {
+    color: #475569;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* Status */
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status.approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status.rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status.cancelled {
+    background: #e2e8f0;
+    color: #475569;
+}
+/* ==========================================
+   MANAGER ACTION BUTTONS
+========================================== */
+
+.approve-button,
+.reject-button {
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.approve-button {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.approve-button:hover {
+    background: #bbf7d0;
+}
+
+.reject-button {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.reject-button:hover {
+    background: #fecaca;
+}
+/* ==========================================
+   APPLY LEAVE FORM
+========================================== */
+
+.dashboard-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #15803d;
+    box-shadow: 0 0 0 3px #dcfce7;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* Submit button */
+
+.auth-button {
+    width: 100%;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #15803d;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.auth-button:hover {
+    background: #166534;
+}
+
+
+/* Message */
+
+#leaveMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .dashboard-card {
+        padding: 20px;
+    }
+}
+/* ==========================================
+   MANAGER DASHBOARD
+========================================== */
+
+.dashboard-description {
+    color: #64748b;
+    margin: 8px 0 20px;
+    font-size: 14px;
+}
+
+.dashboard-action-button {
+    display: inline-block;
+    padding: 11px 18px;
+    background: #15803d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard-action-button:hover {
+    background: #166534;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.summary-item {
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.summary-item span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.summary-item strong {
+    color: #166534;
+    font-size: 24px;
+}
+
+@media (max-width: 700px) {
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ==========================================
+   LEAVE CALENDAR
+========================================== */
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.calendar-header h2 {
+    color: #166534;
+    font-size: 20px;
+}
+
+.calendar-header button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.calendar-header button:hover {
+    background: #dcfce7;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays div {
+    text-align: center;
+    padding: 12px 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.calendar-day {
+    min-height: 85px;
+    border: 1px solid #e2e8f0;
+    padding: 8px;
+    position: relative;
+}
+
+.calendar-day.empty {
+    background: #f8fafc;
+}
+
+.calendar-date {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.calendar-day small {
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.calendar-day.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.calendar-day.approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.calendar-legend {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.calendar-legend span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.calendar-legend i {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.legend-pending {
+    background: #fbbf24;
+}
+
+.legend-approved {
+    background: #22c55e;
+}
+
+@media (max-width: 700px) {
+
+    .calendar-day {
+        min-height: 60px;
+        padding: 5px;
+    }
+
+    .calendar-day small {
+        font-size: 9px;
+    }
+
+}
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 24px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #166534;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.profile-info h2 {
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.profile-info p {
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.profile-role {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.profile-detail {
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.profile-detail span {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.profile-detail strong {
+    color: #1e293b;
+    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ==========================================
+   ADMIN DASHBOARD
+========================================== */
+
+.admin-action-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.admin-action-grid .dashboard-action-button {
+    min-width: 180px;
+    text-align: center;
+}
+/* ==========================================
+   LEAVE BALANCE FORM
+========================================== */
+
+#balanceMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   CALENDAR LEGEND
+================================ */
+
+.calendar-legend {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    align-items: center;
+    font-size: 14px;
+    color: #475569;
+}
+
+.calendar-legend span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.calendar-legend i {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+
+/* Pending - Yellow */
+
+.legend-pending {
+    background: #fbbf24;
+}
+
+
+/* Approved - Green */
+
+.legend-approved {
+    background: #22c55e;
+}
+
+
+/* Rejected - Red */
+
+.legend-rejected {
+    background: #ef4444;
+}
+
+
+/* Holiday - Blue */
+
+.legend-holiday {
+    background: #3b82f6;
+}
+
+
+/* ================================
+   CALENDAR DAY COLORS
+================================ */
+
+.calendar-day.pending {
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    color: #92400e;
+}
+
+.calendar-day.approved {
+    background: #dcfce7;
+    border: 1px solid #16a34a;
+    color: #166534;
+}
+
+.calendar-day.rejected {
+    background: #fee2e2;
+    border: 1px solid #dc2626;
+    color: #991b1b;
+}
+
+.calendar-day.holiday {
+    background: #dbeafe;
+    border: 1px solid #3b82f6;
+    color: #1e40af;
+}
+/* ==========================================
+   EMPLOYEE LEAVE BALANCE
+========================================== */
+
+.leave-balance-section {
+    margin-top: 25px;
+}
+
+.leave-balance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.leave-balance-card {
+    padding: 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.leave-balance-card h3 {
+    color: #166534;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.leave-balance-card p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.leave-balance-card strong {
+    color: #15803d;
+    font-size: 22px;
+}
+
+.leave-balance-card span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    .leave-balance-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+.cancel-leave-button {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-leave-button:hover {
+    background: #fecaca;
+}
+/* ==========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    /* Main layout */
+    .dashboard-layout {
+        display: block;
+        min-height: 100vh;
+    }
+
+    /* Mobile sidebar */
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .sidebar-logo {
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        gap: 6px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .nav-link {
+        white-space: nowrap;
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .logout-button {
+        margin-top: 12px;
+        width: 100%;
+    }
+
+    /* Main content */
+    .main-content {
+        padding: 18px 12px;
+        width: 100%;
+    }
+
+    /* Header */
+    .dashboard-header {
+        margin-bottom: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 23px;
+    }
+
+    .dashboard-header p {
+        font-size: 13px;
+    }
+
+    /* Statistics cards */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-card p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .stat-card h2 {
+        font-size: 24px;
+    }
+
+    /* Dashboard cards */
+    .dashboard-card {
+        padding: 18px;
+        border-radius: 10px;
+    }
+
+    .card-header h2 {
+        font-size: 18px;
+    }
+
+    .card-header p {
+        font-size: 13px;
+    }
+
+    /* Summary */
+    .request-summary,
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .request-summary div,
+    .summary-item {
+        padding: 15px;
+    }
+
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    /* Tables */
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    th,
+    td {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    /* Manager action buttons */
+    .approve-button,
+    .reject-button,
+    .cancel-leave-button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    /* Calendar */
+    .calendar-header h2 {
+        font-size: 17px;
+    }
+
+    .calendar-header button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .calendar-weekdays div {
+        padding: 8px 2px;
+        font-size: 11px;
+    }
+
+    .calendar-day {
+        min-height: 65px;
+        padding: 5px;
+    }
+
+    .calendar-date {
+        font-size: 12px;
+    }
+
+    .calendar-day small {
+        font-size: 8px;
+        margin-top: 6px;
+        overflow: hidden;
+        display: block;
+    }
+
+    /* Calendar legend */
+    .calendar-legend {
+        gap: 10px;
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+
+    /* Leave balance */
+    .leave-balance-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .leave-balance-card {
+        padding: 16px;
+    }
+
+    /* Profile */
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Admin buttons */
+    .admin-action-grid {
+        flex-direction: column;
+    }
+
+    .admin-action-grid .dashboard-action-button {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+    }
+
+    /* Prevent oversized content */
+    img,
+    input,
+    select,
+    textarea,
+    button {
+        max-width: 100%;
+    }
+}
+/* Employees Page */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    color: #64748B;
+}
+
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+th {
+    background: #F8FAFC;
+    color: #475569;
+    font-weight: 600;
+}
+
+td {
+    color: #334155;
+}
+
+
+/* View Button */
+
+.view-btn {
+    background: #15803D;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #166534;
+}
+
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 650px;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #64748B;
+}
+
+
+/* Period Buttons */
+
+.period-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.period-buttons button {
+    padding: 9px 18px;
+    border: 1px solid #15803D;
+    background: white;
+    color: #15803D;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.period-buttons button:hover {
+    background: #15803D;
+    color: white;
+}
+
+
+/* Overview Cards */
+
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.overview-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+}
+
+.overview-card span {
+    display: block;
+    color: #64748B;
+    margin-bottom: 8px;
+}
+
+.overview-card strong {
+    font-size: 24px;
+    color: #15803D;
+}
+/* ==========================================
+   MANAGER CALENDAR
+   ========================================== */
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    color: #1E293B;
+}
+
+.calendar-header button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E2E8F0;
+    background: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #15803D;
+}
+
+.calendar-header button:hover {
+    background: #DCFCE7;
+}
+
+
+/* Weekdays */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-bottom: none;
+}
+
+.calendar-weekdays div {
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #64748B;
+}
+
+
+/* Calendar grid */
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-left: 1px solid #E2E8F0;
+}
+
+
+/* Individual day */
+
+.calendar-day {
+    min-height: 110px;
+    padding: 8px;
+    border-right: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+    background: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.calendar-day:hover {
+    background: #F8FAFC;
+}
+
+
+/* Empty days */
+
+.calendar-day.empty {
+    background: #F8FAFC;
+    cursor: default;
+}
+
+
+/* Date number */
+
+.calendar-date {
+    display: block;
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 7px;
+}
+
+
+/* Today */
+
+.calendar-day.today {
+    background: #F0FDF4;
+}
+
+.calendar-day.today .calendar-date {
+    color: #15803D;
+}
+
+
+/* ==========================================
+   LEAVE ITEMS
+   ========================================== */
+
+.calendar-leave {
+    display: block;
+    padding: 5px 7px;
+    margin-top: 4px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* Pending - Yellow */
+
+.calendar-leave.pending {
+    background: #FEF3C7;
+    color: #92400E;
+    border-left: 3px solid #F59E0B;
+}
+
+
+/* Approved - Green */
+
+.calendar-leave.approved {
+    background: #DCFCE7;
+    color: #166534;
+    border-left: 3px solid #15803D;
+}
+
+
+/* Rejected - Red */
+
+.calendar-leave.rejected {
+    background: #FEE2E2;
+    color: #991B1B;
+    border-left: 3px solid #DC2626;
+}
+
+
+/* Cancelled - Gray */
+
+.calendar-leave.cancelled {
+    background: #E2E8F0;
+    color: #475569;
+    border-left: 3px solid #64748B;
+}
+
+
+/* ==========================================
+   LEGEND
+   ========================================== */
+
+.calendar-legend {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #E2E8F0;
+    flex-wrap: wrap;
+}
+
+.calendar-legend span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.calendar-legend i {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+
+/* Legend colors */
+
+.legend-pending {
+    background: #F59E0B;
+}
+
+.legend-approved {
+    background: #15803D;
+}
+
+.legend-rejected {
+    background: #DC2626;
+}
+
+
+/* ==========================================
+   STATUS BADGES
+   ========================================== */
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge.pending {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.status-badge.approved {
+    background: #DCFCE7;
+    color: #166534;
+}
+
+.status-badge.rejected {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.status-badge.cancelled {
+    background: #E2E8F0;
+    color: #475569;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .calendar-day {
+        min-height: 80px;
+        padding: 5px;
+    }
+
+    .calendar-leave {
+        font-size: 9px;
+        padding: 4px;
+    }
+
+    .calendar-weekdays div {
+        font-size: 12px;
+        padding: 8px 3px;
+    }
+
+}
+/* ==========================================
+   ADMIN USER STATUS BUTTONS
+========================================== */
+
+.status-toggle-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 6px;
+    transition: 0.2s ease;
+}
+
+/* Deactivate */
+.deactivate-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.deactivate-btn:hover {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+/* Activate */
+.activate-btn {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.activate-btn:hover {
+    background: #bbf7d0;
+    color: #14532d;
+}
+
+/* Small screen */
+@media (max-width: 700px) {
+
+    .status-toggle-btn {
+        display: block;
+        margin-left: 0;
+        margin-top: 6px;
+        width: 100%;
+    }
+
+}

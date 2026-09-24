@@ -1,0 +1,162 @@
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #15803d;
+    color: white;
+    border-radius: 14px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.auth-header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #15803d;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #15803d;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background: #166534;
+}
+
+.error-message {
+    margin-top: 15px;
+    text-align: center;
+    color: #dc2626;
+    font-size: 14px;
+}
+
+.auth-footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.auth-footer a {
+    color: #15803d;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+@media (max-width: 500px) {
+
+    .auth-container {
+        padding: 15px;
+        align-items: center;
+    }
+
+    .auth-card {
+        width: 100%;
+        padding: 28px 20px;
+        border-radius: 12px;
+    }
+
+    .auth-header {
+        margin-bottom: 25px;
+    }
+
+    .logo-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+
+    .auth-header h1 {
+        font-size: 24px;
+    }
+
+    .auth-header p {
+        font-size: 13px;
+    }
+
+    .form-group {
+        margin-bottom: 17px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .auth-button {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    .auth-footer {
+        margin-top: 20px;
+        font-size: 13px;
+    }
+}

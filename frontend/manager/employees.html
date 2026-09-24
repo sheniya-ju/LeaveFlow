@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LeaveFlow | Employees</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-layout">
+
+
+    
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                ✓
+            </div>
+
+            <span>
+                LeaveFlow
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="nav-link"
+            >
+                Dashboard
+            </a>
+
+
+            <a
+                href="leave-requests.html"
+                class="nav-link"
+            >
+                Leave Requests
+            </a>
+
+
+            <a
+                href="employees.html"
+                class="nav-link active"
+            >
+                Employees
+            </a>
+
+
+            <a
+                href="calendar.html"
+                class="nav-link"
+            >
+                Calendar
+            </a>
+
+
+        </nav>
+
+
+        <button
+            class="logout-button"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+
+    </aside>
+
+
+
+    
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Employees
+                </h1>
+
+                <p>
+                    View employee leave overview
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        
+
+        <section class="dashboard-card">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Employee List
+                    </h2>
+
+                    <p>
+                        Select an employee to view
+                        their leave statistics.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="table-container">
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Employee
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tbody
+                        id="employeeTableBody"
+                    >
+
+                        <tr>
+
+                            <td colspan="4">
+                                Loading employees...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        
+
+        <section
+            class="dashboard-card"
+            id="employeeOverview"
+            style="
+                display: none;
+                margin-top: 25px;
+            "
+        >
+
+
+            <!-- EMPLOYEE HEADER -->
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <h2
+                        id="selectedEmployeeName"
+                    >
+                        Employee Overview
+                    </h2>
+
+
+                    <p
+                        id="selectedEmployeeEmail"
+                    >
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            
+
+            <div
+                class="overview-filter"
+                style="
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    flex-wrap: wrap;
+                "
+            >
+
+
+                <!-- VIEW TYPE -->
+
+                <label>
+                    View:
+                </label>
+
+
+                <select
+                    id="viewType"
+                    onchange="handleViewChange()"
+                >
+
+                    <option value="month">
+                        Month
+                    </option>
+
+                    <option value="year">
+                        Year
+                    </option>
+
+                </select>
+
+
+
+                <!-- MONTH -->
+
+                <select
+                    id="monthSelect"
+                >
+
+                    <option value="1">
+                        January
+                    </option>
+
+                    <option value="2">
+                        February
+                    </option>
+
+                    <option value="3">
+                        March
+                    </option>
+
+                    <option value="4">
+                        April
+                    </option>
+
+                    <option value="5">
+                        May
+                    </option>
+
+                    <option value="6">
+                        June
+                    </option>
+
+                    <option value="7">
+                        July
+                    </option>
+
+                    <option value="8">
+                        August
+                    </option>
+
+                    <option value="9">
+                        September
+                    </option>
+
+                    <option value="10">
+                        October
+                    </option>
+
+                    <option value="11">
+                        November
+                    </option>
+
+                    <option value="12">
+                        December
+                    </option>
+
+                </select>
+
+
+
+                <!-- YEAR -->
+
+                <select
+                    id="yearSelect"
+                >
+
+                    <!-- JavaScript will add years -->
+
+                </select>
+
+
+
+                <!-- LOAD BUTTON -->
+
+                <button
+                    class="view-btn"
+                    onclick="loadSelectedOverview()"
+                >
+                    View
+                </button>
+
+
+            </div>
+
+
+
+            
+
+            <div class="overview-cards">
+
+
+                <div class="overview-card">
+
+                    <span>
+                        Total Leave
+                    </span>
+
+                    <strong
+                        id="totalDays"
+                    >
+                        0
+                    </strong>
+
+                    <small>
+                        Days
+                    </small>
+
+                </div>
+
+
+
+                <div class="overview-card">
+
+                    <span>
+                        Approved
+                    </span>
+
+                    <strong
+                        id="approvedDays"
+                    >
+                        0
+                    </strong>
+
+                    <small>
+                        Days
+                    </small>
+
+                </div>
+
+
+
+                <div class="overview-card">
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <strong
+                        id="pendingDays"
+                    >
+                        0
+                    </strong>
+
+                    <small>
+                        Days
+                    </small>
+
+                </div>
+
+
+
+                <div class="overview-card">
+
+                    <span>
+                        Rejected
+                    </span>
+
+                    <strong
+                        id="rejectedDays"
+                    >
+                        0
+                    </strong>
+
+                    <small>
+                        Days
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            
+
+            <div
+                style="
+                    margin-top: 30px;
+                "
+            >
+
+
+                <h2>
+                    Leave Records
+                </h2>
+
+
+                <div class="table-container">
+
+
+                    <table>
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Leave Type
+                                </th>
+
+                                <th>
+                                    Start Date
+                                </th>
+
+                                <th>
+                                    End Date
+                                </th>
+
+                                <th>
+                                    Days
+                                </th>
+
+                                <th>
+                                    Days in Period
+                                </th>
+
+                                <th>
+                                    Reason
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <tbody
+                            id="employeeLeaveTableBody"
+                        >
+
+                            <tr>
+
+                                <td colspan="7">
+                                    Select an employee
+                                    to view leave records.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script
+    src="../js/manager.js"
+></script>
+
+
+<script
+    src="../js/manager-employees.js"
+></script>
+
+
+</body>
+
+</html>

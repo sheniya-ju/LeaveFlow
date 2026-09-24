@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Holidays | LeaveFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">✓</div>
+                <span>LeaveFlow</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    Dashboard
+                </a>
+
+                <a href="employees.html" class="nav-link">
+                    Employees
+                </a>
+
+                <a href="leave-balances.html" class="nav-link">
+                    Leave Balances
+                </a>
+
+                <a href="holidays.html" class="nav-link active">
+                    Holidays
+                </a>
+
+            </nav>
+
+            <button class="logout-button" onclick="logout()">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <h1>Holidays</h1>
+
+                <p>
+                    Manage company holidays
+                </p>
+
+            </header>
+
+
+            <!-- Add Holiday -->
+
+            <section class="dashboard-card">
+
+                <h2>Add Holiday</h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="holidayName">
+                            Holiday Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="holidayName"
+                            placeholder="Example: Independence Day"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="holidayDate">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="holidayDate"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="auth-button"
+                    id="addHolidayButton"
+                >
+                    Add Holiday
+                </button>
+
+
+                <p id="holidayMessage"></p>
+
+            </section>
+
+
+            <!-- Holiday List -->
+
+            <section class="dashboard-card">
+
+                <h2>Holiday List</h2>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Holiday</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="holidayTableBody">
+
+                            <tr>
+                                <td colspan="3">
+                                    No holidays added yet.
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/admin.js"></script>
+    <script src="../js/holidays.js"></script>
+
+</body>
+
+</html>

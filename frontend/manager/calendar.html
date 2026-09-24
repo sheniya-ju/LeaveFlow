@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Leave Calendar | LeaveFlow</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-layout">
+
+
+   
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                ✓
+            </div>
+
+            <span>
+                LeaveFlow
+            </span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <a
+                href="dashboard.html"
+                class="nav-link"
+            >
+                Dashboard
+            </a>
+
+
+            <a
+                href="leave-requests.html"
+                class="nav-link"
+            >
+                Leave Requests
+            </a>
+
+
+            <a
+                href="employees.html"
+                class="nav-link"
+            >
+                Employees
+            </a>
+
+
+            <a
+                href="calendar.html"
+                class="nav-link active"
+            >
+                Calendar
+            </a>
+
+
+        </nav>
+
+
+        <button
+            class="logout-button"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+
+    </aside>
+
+
+
+   
+    <!-- MAIN CONTENT -->
+   
+
+    <main class="main-content">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Leave Calendar
+                </h1>
+
+                <p>
+                    View employee leave schedules
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+       
+        <!-- CALENDAR -->
+       
+
+        <section class="dashboard-card">
+
+
+            <div class="calendar-header">
+
+
+                <button
+                    id="previousMonth"
+                    type="button"
+                >
+                    ←
+                </button>
+
+
+                <h2 id="currentMonth">
+                    September 2026
+                </h2>
+
+
+                <button
+                    id="nextMonth"
+                    type="button"
+                >
+                    →
+                </button>
+
+
+            </div>
+
+
+
+            <!-- WEEK DAYS -->
+
+            <div class="calendar-weekdays">
+
+                <div>Sun</div>
+
+                <div>Mon</div>
+
+                <div>Tue</div>
+
+                <div>Wed</div>
+
+                <div>Thu</div>
+
+                <div>Fri</div>
+
+                <div>Sat</div>
+
+            </div>
+
+
+
+            <!-- CALENDAR DAYS -->
+
+            <div
+                id="calendarDays"
+                class="calendar-days"
+            >
+            </div>
+
+
+
+            <!-- LEGEND -->
+
+            <div class="calendar-legend">
+
+
+                <span>
+
+                    <i class="legend-pending"></i>
+
+                    Pending
+
+                </span>
+
+
+                <span>
+
+                    <i class="legend-approved"></i>
+
+                    Approved
+
+                </span>
+
+
+                <span>
+
+                    <i class="legend-rejected"></i>
+
+                    Rejected
+
+                </span>
+
+
+            </div>
+
+
+        </section>
+
+
+
+       
+        <!-- SELECTED DATE DETAILS -->
+        
+
+        <section
+            class="dashboard-card"
+            id="selectedDateSection"
+            style="margin-top: 25px;"
+        >
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Leave Details
+                    </h2>
+
+                    <p id="selectedDateText">
+                        Click a date to view employee leaves.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Employee
+                            </th>
+
+                            <th>
+                                Leave Type
+                            </th>
+
+                            <th>
+                                Start Date
+                            </th>
+
+                            <th>
+                                End Date
+                            </th>
+
+                            <th>
+                                Days
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Reason
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="selectedDateLeaves"
+                    >
+
+                        <tr>
+
+                            <td colspan="7">
+                                Select a date from the calendar.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script
+    src="../js/manager.js"
+></script>
+
+
+<script
+    src="../js/manager-calendar.js"
+></script>
+
+
+</body>
+
+</html>

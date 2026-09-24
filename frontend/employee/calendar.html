@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leave Calendar | LeaveFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">✓</div>
+                <span>LeaveFlow</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    Dashboard
+                </a>
+
+                <a href="apply-leave.html" class="nav-link">
+                    Apply Leave
+                </a>
+
+                <a href="leave-history.html" class="nav-link">
+                    Leave History
+                </a>
+
+                <a href="calendar.html" class="nav-link active">
+                    Calendar
+                </a>
+
+                <a href="profile.html" class="nav-link">
+                    Profile
+                </a>
+
+            </nav>
+
+            <button class="logout-button" onclick="logout()">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <h1>Leave Calendar</h1>
+
+                <p>
+                    View your upcoming leave dates
+                </p>
+
+            </header>
+
+
+            <section class="dashboard-card">
+
+                <div class="calendar-header">
+
+                    <button id="previousMonth">
+                        ←
+                    </button>
+
+                    <h2 id="currentMonth">
+                        September 2026
+                    </h2>
+
+                    <button id="nextMonth">
+                        →
+                    </button>
+
+                </div>
+
+
+                <div class="calendar-weekdays">
+
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+
+                </div>
+
+
+                <div
+                    id="calendarDays"
+                    class="calendar-days">
+                </div>
+
+
+                <div class="calendar-legend">
+
+    <span>
+        <i class="legend-pending"></i>
+        Pending
+    </span>
+
+    <span>
+        <i class="legend-approved"></i>
+        Approved
+    </span>
+
+    <span>
+        <i class="legend-rejected"></i>
+        Rejected
+    </span>
+
+    <span>
+        <i class="legend-holiday"></i>
+        Holiday
+    </span>
+
+</div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/employee.js"></script>
+    <script src="../js/calendar.js"></script>
+
+</body>
+
+</html>

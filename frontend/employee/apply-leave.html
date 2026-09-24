@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply Leave | LeaveFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">✓</div>
+                <span>LeaveFlow</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    Dashboard
+                </a>
+
+                <a href="apply-leave.html" class="nav-link active">
+                    Apply Leave
+                </a>
+
+                <a href="leave-history.html" class="nav-link">
+                    Leave History
+                </a>
+
+                <a href="calendar.html" class="nav-link">
+                    Calendar
+                </a>
+
+                <a href="profile.html" class="nav-link">
+                    Profile
+                </a>
+
+            </nav>
+
+            <button class="logout-button" onclick="logout()">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+                <h1>Apply for Leave</h1>
+                <p>Submit a new leave request</p>
+            </header>
+
+
+            <section class="dashboard-card">
+
+                <form id="leaveForm">
+
+                    <div class="form-group">
+                        <label for="leaveType">Leave Type</label>
+
+                        <select id="leaveType" required>
+                            <option value="">Select leave type</option>
+                            <option value="Casual">Casual Leave</option>
+                            <option value="Sick">Sick Leave</option>
+                            <option value="Earned">Earned Leave</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="startDate">Start Date</label>
+
+                            <input
+                                type="date"
+                                id="startDate"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="endDate">End Date</label>
+
+                            <input
+                                type="date"
+                                id="endDate"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="reason">Reason</label>
+
+                        <textarea
+                            id="reason"
+                            rows="5"
+                            placeholder="Enter the reason for your leave"
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="auth-button"
+                    >
+                        Submit Leave Request
+                    </button>
+
+                    <p id="leaveMessage"></p>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/employee.js"></script>
+
+</body>
+</html>

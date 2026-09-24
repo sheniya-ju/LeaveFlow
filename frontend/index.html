@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LeaveFlow | Employee Leave Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            background: #f8fafc;
+        }
+
+        .landing-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+
+        .landing-nav {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #166534;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 9px;
+            background: #15803d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-login,
+        .nav-register {
+            padding: 10px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-login {
+            color: #166534;
+            border: 1px solid #15803d;
+            background: white;
+        }
+
+        .nav-login:hover {
+            background: #dcfce7;
+        }
+
+        .nav-register {
+            color: white;
+            background: #15803d;
+        }
+
+        .nav-register:hover {
+            background: #166534;
+        }
+
+        /* Hero */
+
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            padding: 80px 10%;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #15803d;
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .primary-button,
+        .secondary-button {
+            padding: 13px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .primary-button {
+            background: #15803d;
+            color: white;
+        }
+
+        .primary-button:hover {
+            background: #166534;
+        }
+
+        .secondary-button {
+            background: white;
+            color: #166534;
+            border: 1px solid #cbd5e1;
+        }
+
+        .secondary-button:hover {
+            background: #f0fdf4;
+        }
+
+        /* Illustration */
+
+        .hero-illustration {
+            width: 420px;
+            min-width: 350px;
+        }
+
+        .illustration-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+        }
+
+        .illustration-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .illustration-header h3 {
+            color: #166534;
+            font-size: 18px;
+        }
+
+        .check-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #dcfce7;
+            color: #15803d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .leave-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 12px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+        }
+
+        .leave-info strong {
+            display: block;
+            color: #1e293b;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .leave-info span {
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        .approved {
+            padding: 5px 10px;
+            border-radius: 15px;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .pending {
+            padding: 5px 10px;
+            border-radius: 15px;
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* Features */
+
+        .features {
+            background: white;
+            padding: 55px 10%;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .features h2 {
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 35px;
+            font-size: 26px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature-card {
+            padding: 25px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background: #ffffff;
+        }
+
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 9px;
+            background: #dcfce7;
+            color: #15803d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #1e293b;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+
+        .landing-footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 6%;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-illustration {
+                width: 100%;
+                max-width: 420px;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .landing-nav {
+                padding: 0 5%;
+            }
+
+            .nav-login,
+            .nav-register {
+                padding: 8px 12px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-illustration {
+                min-width: 0;
+            }
+        }
+        .illustration-message {
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.illustration-message h4 {
+    color: #1e293b;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.illustration-message p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.illustration-features {
+    padding-top: 18px;
+}
+
+.illustration-features div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 0;
+    color: #475569;
+    font-size: 13px;
+}
+
+.illustration-features span {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #15803d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+
+<div class="landing-page">
+
+    <!-- Navbar -->
+
+    <nav class="landing-nav">
+
+        <div class="brand">
+            <div class="brand-icon">✓</div>
+            <span>LeaveFlow</span>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="login.html" class="nav-login">Login</a>
+            <a href="register.html" class="nav-register">Register</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                Employee Leave Management System
+            </span>
+
+            <h1>
+                Manage Your Leaves
+                <span>Effortlessly.</span>
+            </h1>
+
+            <p>
+                LeaveFlow makes employee leave management simple.
+                Apply for leave, track requests, manage balances,
+                and handle approvals from one convenient platform.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="login.html" class="primary-button">
+                    Get Started
+                </a>
+
+                <a href="register.html" class="secondary-button">
+                    Create Account
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Simple Project Illustration -->
+
+<div class="hero-illustration">
+
+    <div class="illustration-card">
+
+        <div class="illustration-header">
+            <h3>LeaveFlow</h3>
+
+            <div class="check-icon">
+                ✓
+            </div>
+        </div>
+
+        <div class="illustration-message">
+            <h4>Simple. Organized. Efficient.</h4>
+
+            <p>
+                Manage leave requests, approvals,
+                leave balances and holidays from
+                one centralized system.
+            </p>
+        </div>
+
+        <div class="illustration-features">
+
+            <div>
+                <span>✓</span>
+                Apply Leave
+            </div>
+
+            <div>
+                <span>✓</span>
+                Track Requests
+            </div>
+
+            <div>
+                <span>✓</span>
+                Manage Approvals
+            </div>
+
+            <div>
+                <span>✓</span>
+                View Calendar
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+            
+
+    </section>
+
+
+    <!-- Features -->
+
+    <section class="features">
+
+        <h2>Everything You Need to Manage Leave</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📝</div>
+
+                <h3>Easy Leave Requests</h3>
+
+                <p>
+                    Submit leave requests with dates,
+                    leave type and reason in a simple form.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">✓</div>
+
+                <h3>Manager Approvals</h3>
+
+                <p>
+                    Managers can review, approve or reject
+                    employee leave requests efficiently.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📊</div>
+
+                <h3>Leave Balance</h3>
+
+                <p>
+                    Keep track of total, used and remaining
+                    leave days throughout the year.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📅</div>
+
+                <h3>Leave Calendar</h3>
+
+                <p>
+                    View employee leaves and holidays
+                    through an easy-to-understand calendar.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer class="landing-footer">
+
+        © 2026 LeaveFlow. Employee Leave Management System.
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>

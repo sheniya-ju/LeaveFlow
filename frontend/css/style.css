@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+.form-error {
+    display: block;
+    margin-top: 5px;
+    color: #dc2626;
+    font-size: 12px;
+}
+/* ==========================================
+   GLOBAL MOBILE RESPONSIVE
+   ========================================== */
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    button {
+        min-height: 42px;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+}

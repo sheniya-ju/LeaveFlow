@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manager Dashboard | LeaveFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">✓</div>
+                <span>LeaveFlow</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+    <a href="dashboard.html" class="nav-link active">
+        Dashboard
+    </a>
+
+    <a href="leave-requests.html" class="nav-link">
+        Leave Requests
+    </a>
+
+    <a href="employees.html" class="nav-link">
+        Employees
+    </a>
+
+    <a href="calendar.html" class="nav-link">
+        Calendar
+    </a>
+
+</nav>
+
+            <button class="logout-button" onclick="logout()">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <h1 id="welcomeMessage">
+                    Manager Dashboard
+                </h1>
+
+                <p>
+                    Manage employee leave requests
+                </p>
+
+            </header>
+
+
+            <!-- Statistics -->
+
+            <section class="dashboard-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-card-icon">
+                        📋
+                    </div>
+
+                    <div>
+                        <p>Total Requests</p>
+                        <h2 id="totalRequests">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-icon">
+                        ⏳
+                    </div>
+
+                    <div>
+                        <p>Pending</p>
+                        <h2 id="pendingRequests">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <p>Approved</p>
+                        <h2 id="approvedRequests">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-icon">
+                        ✕
+                    </div>
+
+                    <div>
+                        <p>Rejected</p>
+                        <h2 id="rejectedRequests">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-card-icon">
+                        ↩
+                    </div>
+
+                    <div>
+                        <p>Cancelled</p>
+                        <h2 id="cancelledRequests">0</h2>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Quick Action -->
+
+            <section class="dashboard-card">
+
+                <h2>Leave Management</h2>
+
+                <p class="dashboard-description">
+                    Review employee leave requests and take action.
+                </p>
+
+                <a
+                    href="leave-requests.html"
+                    class="dashboard-action-button"
+                >
+                    Review Leave Requests
+                </a>
+
+            </section>
+
+
+            <!-- Summary -->
+
+            <section class="dashboard-card">
+
+                <h2>Request Summary</h2>
+
+                <div class="summary-grid">
+
+                    <div class="summary-item">
+
+                        <span>Pending Requests</span>
+
+                        <strong id="pendingSummary">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>Approved Requests</span>
+
+                        <strong id="approvedSummary">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-item">
+
+                        <span>Rejected Requests</span>
+
+                        <strong id="rejectedSummary">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/manager.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">✓</div>
+                <span>LeaveFlow</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link active">
+                    Dashboard
+                </a>
+
+                <a href="apply-leave.html" class="nav-link">
+                    Apply Leave
+                </a>
+
+                <a href="leave-history.html" class="nav-link">
+                    Leave History
+                </a>
+
+                <a href="calendar.html" class="nav-link">
+                    Calendar
+                </a>
+
+                <a href="profile.html" class="nav-link">
+                    Profile
+                </a>
+
+            </nav>
+
+            <button class="logout-button" onclick="logout()">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p id="welcomeMessage">
+                        Welcome back!
+                    </p>
+                </div>
+
+            </header>
+
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <div>
+                        <p>Total Leave</p>
+                        <h2 id="totalLeaves">-</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div>
+                        <p>Used Leave</p>
+                        <h2 id="usedLeaves">-</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div>
+                        <p>Remaining Leave</p>
+                        <h2 id="remainingLeaves">-</h2>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div>
+                        <p>Pending Requests</p>
+                        <h2 id="pendingRequests">-</h2>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+                    <div>
+                        <h2>Leave Overview</h2>
+                        <p>Your leave request summary</p>
+                    </div>
+                </div>
+
+                <div class="request-summary">
+
+                    <div>
+                        <span>Approved</span>
+                        <strong id="approvedRequests">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Pending</span>
+                        <strong id="pendingRequestsBottom">-</strong>
+                    </div>
+
+                    <div>
+                        <span>Rejected</span>
+                        <strong id="rejectedRequests">-</strong>
+                    </div>
+
+                </div>
+
+            </section>
+            <section class="dashboard-card leave-balance-section">
+
+    <div class="card-header">
+        <div>
+            <h2>Leave Balance</h2>
+            <p>Your available leave balance</p>
+        </div>
+    </div>
+
+    <div class="leave-balance-grid">
+
+        <div class="leave-balance-card">
+            <h3>Casual Leave</h3>
+            <p>
+                Remaining:
+                <strong id="casualRemaining">-</strong>
+            </p>
+            <span id="casualDetails">- / - used</span>
+        </div>
+
+
+        <div class="leave-balance-card">
+            <h3>Sick Leave</h3>
+            <p>
+                Remaining:
+                <strong id="sickRemaining">-</strong>
+            </p>
+            <span id="sickDetails">- / - used</span>
+        </div>
+
+
+        <div class="leave-balance-card">
+            <h3>Earned Leave</h3>
+            <p>
+                Remaining:
+                <strong id="earnedRemaining">-</strong>
+            </p>
+            <span id="earnedDetails">- / - used</span>
+        </div>
+
+    </div>
+
+</section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/employee.js"></script>
+
+</body>
+</html>

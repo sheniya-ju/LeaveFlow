@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | LeaveFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">✓</div>
+                <span>LeaveFlow</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link">
+                    Dashboard
+                </a>
+
+                <a href="apply-leave.html" class="nav-link">
+                    Apply Leave
+                </a>
+
+                <a href="leave-history.html" class="nav-link">
+                    Leave History
+                </a>
+
+                <a href="calendar.html" class="nav-link">
+                    Calendar
+                </a>
+
+                <a href="profile.html" class="nav-link active">
+                    Profile
+                </a>
+
+            </nav>
+
+            <button class="logout-button" onclick="logout()">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <h1>My Profile</h1>
+
+                <p>
+                    View your account information
+                </p>
+
+            </header>
+
+
+            <section class="profile-card">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    U
+                </div>
+
+                <div class="profile-info">
+
+                    <h2 id="profileName">
+                        Loading...
+                    </h2>
+
+                    <p id="profileEmail">
+                        Loading...
+                    </p>
+
+                    <span class="profile-role" id="profileRole">
+                        Employee
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card">
+
+                <h2>Account Information</h2>
+
+                <div class="profile-details">
+
+                    <div class="profile-detail">
+
+                        <span>Name</span>
+
+                        <strong id="detailName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>Email</span>
+
+                        <strong id="detailEmail">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>Role</span>
+
+                        <strong id="detailRole">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="profile-detail">
+
+                        <span>Account Status</span>
+
+                        <strong id="detailStatus">
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/employee.js"></script>
+    <script src="../js/profile.js"></script>
+
+</body>
+
+</html>

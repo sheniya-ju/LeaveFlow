@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | LeaveFlow</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <div class="logo-icon">✓</div>
+                <span>LeaveFlow</span>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-link active">
+                    Dashboard
+                </a>
+
+                <a href="employees.html" class="nav-link">
+                    Employees
+                </a>
+
+                <a href="leave-balances.html" class="nav-link">
+                    Leave Balances
+                </a>
+
+                <a href="holidays.html" class="nav-link">
+                    Holidays
+                </a>
+
+            </nav>
+
+            <button class="logout-button" onclick="logout()">
+                Logout
+            </button>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <h1 id="welcomeMessage">
+                    Admin Dashboard
+                </h1>
+
+                <p>
+                    Manage employees and leave settings
+                </p>
+
+            </header>
+
+
+            <section class="dashboard-card">
+
+                <h2>Administration</h2>
+
+                <p class="dashboard-description">
+                    Manage employees, leave balances and company holidays.
+                </p>
+
+                <div class="admin-action-grid">
+
+                    <a
+                        href="employees.html"
+                        class="dashboard-action-button"
+                    >
+                        Manage Employees
+                    </a>
+
+                    <a
+                        href="leave-balances.html"
+                        class="dashboard-action-button"
+                    >
+                        Manage Leave Balances
+                    </a>
+
+                    <a
+                        href="holidays.html"
+                        class="dashboard-action-button"
+                    >
+                        Manage Holidays
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card">
+
+                <h2>Admin Responsibilities</h2>
+
+                <div class="summary-grid">
+
+                    <div class="summary-item">
+                        <span>Employees</span>
+                        <strong>Manage</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Leave Balances</span>
+                        <strong>Manage</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Holidays</span>
+                        <strong>Manage</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>
