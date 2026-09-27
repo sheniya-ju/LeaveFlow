@@ -1,15 +1,12 @@
+
 import os
-import smtplib
-from email.message import EmailMessage
-
-
-SMTP_SERVER = "smtp.gmail.com"
-SMTP_PORT = 587
-
+import json
+import urllib.request
+import urllib.error
 
 
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
-SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
+BREVO_API_KEY = os.getenv("BREVO_API_KEY")
 
 
 def send_email(
@@ -17,26 +14,64 @@ def send_email(
     subject: str,
     body: str
 ):
+    url = "https://api.brevo.com/v3/smtp/email"
 
-    message = EmailMessage()
+    payload = {
+        "sender": {
+            "name": "LeaveFlow",
+            "email": SENDER_EMAIL
+        },
+        "to": [
+            {
+                "email": recipient_email
+            }
+        ],
+        "subject": subject,
+        "textContent": body
+    }
 
-    message["From"] = SENDER_EMAIL
-    message["To"] = recipient_email
-    message["Subject"] = subject
+    data = json.dumps(payload).encode("utf-8")
 
-    message.set_content(body)
+    request = urllib.request.Request(
+        url,
+        data=data,
+        headers={
+            "api-key": BREVO_API_KEY,
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        method="POST"
+    )
 
+    try:
+        with urllib.request.urlopen(
+            request,
+            timeout=30
+        ) as response:
 
-    with smtplib.SMTP(
-        SMTP_SERVER,
-        SMTP_PORT
-    ) as server:
+            print(
+                "Brevo email sent:",
+                response.status
+            )
 
-        server.starttls()
-
-        server.login(
-            SENDER_EMAIL,
-            SENDER_PASSWORD
+    except urllib.error.HTTPError as e:
+        error = e.read().decode(
+            "utf-8",
+            errors="replace"
         )
 
-        server.send_message(message)
+        print(
+            "Brevo email failed:",
+            e.code,
+            error
+        )
+
+        raise
+
+    except Exception as e:
+        print(
+            "Email notification failed:",
+            str(e)
+        )
+
+        raise
