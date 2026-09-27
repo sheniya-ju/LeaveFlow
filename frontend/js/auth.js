@@ -189,9 +189,15 @@ if (registerForm) {
             }
 
 
-            alert("Account created successfully!");
+            registerMessage.style.color = "#15803d";
+            registerMessage.textContent =
+            "Registration successful! Redirecting to login...";
 
+            registerForm.reset();
+
+            setTimeout(() => {
             window.location.href = "login.html";
+            }, 2000);
 
 
         } catch (error) {
